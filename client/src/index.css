@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Press+Start+2P&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 224 71.4% 4.1%;
+  --muted: 220 14.3% 95.9%;
+  --muted-foreground: 220 8.9% 46.1%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 224 71.4% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 224 71.4% 4.1%;
+  --border: 220 13% 91%;
+  --input: 220 13% 91%;
+  --primary: 224 82% 9%; /* #0a0a23 (navy) */
+  --primary-foreground: 210 20% 98%;
+  --secondary: 220 14.3% 95.9%;
+  --secondary-foreground: 220.9 39.3% 11%;
+  --accent: 43 89% 63%; /* #f2c14e (gold) */
+  --accent-foreground: 224 71.4% 4.1%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 20% 98%;
+  --ring: 224 71.4% 4.1%;
+  --radius: 0.5rem;
+  
+  /* Custom colors */
+  --navy: 224 82% 9%; /* #0a0a23 */
+  --gold: 43 89% 63%; /* #f2c14e */
+  --magenta: 336 100% 50%; /* #ff006e */
+  --blue: 217 100% 61%; /* #3a86ff */
+  
+  /* Chart colors */
+  --chart-1: var(--navy);
+  --chart-2: var(--gold);
+  --chart-3: var(--magenta);
+  --chart-4: var(--blue);
+  --chart-5: 160 84% 39%;
+}
+
+.dark {
+  --background: 224 71.4% 4.1%;
+  --foreground: 210 20% 98%;
+  --muted: 215 27.9% 16.9%;
+  --muted-foreground: 217.9 10.6% 64.9%;
+  --popover: 224 71.4% 4.1%;
+  --popover-foreground: 210 20% 98%;
+  --card: 224 71.4% 4.1%;
+  --card-foreground: 210 20% 98%;
+  --border: 215 27.9% 16.9%;
+  --input: 215 27.9% 16.9%;
+  --primary: 210 20% 98%;
+  --primary-foreground: 220.9 39.3% 11%;
+  --secondary: 215 27.9% 16.9%;
+  --secondary-foreground: 210 20% 98%;
+  --accent: 43 89% 63%;
+  --accent-foreground: 224 71.4% 4.1%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 20% 98%;
+  --ring: 216 12.2% 83.9%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-navy dark:text-white;
+  }
+}
+
+@layer components {
+  .font-pixel {
+    font-family: 'Press Start 2P', cursive;
+  }
+  
+  .pixel-border {
+    position: relative;
+    box-shadow: 0 0 0 2px #000000, 
+                2px 2px 0 2px #000000, 
+                4px 4px 0 2px #000000;
+  }
+  
+  .clip-path-diagonal {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+  
+  .animate-pixel-pulse {
+    animation: pixel-pulse 2s infinite;
+  }
+  
+  @keyframes pixel-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+}
