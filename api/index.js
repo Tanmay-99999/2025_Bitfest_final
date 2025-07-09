@@ -50,14 +50,10 @@ app.post('/api/newsletter', (req, res) => {
   res.json(newsletter);
 });
 
-// Serve static files from the build directory
-app.use(express.static(path.join(__dirname, "../dist/public")));
-
-// Handle client-side routing - serve index.html for all non-API routes
-app.get("*", (req, res) => {
-  if (!req.path.startsWith("/api")) {
-    res.sendFile(path.join(__dirname, "../dist/public/index.html"));
-  }
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ error: 'Something went wrong!' });
 });
 
 export default app;
