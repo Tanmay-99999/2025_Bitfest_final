@@ -190,7 +190,7 @@ export const scheduleData = {
   day1: [
     { time: "10:00 AM - 12:30 PM", event: "Inauguration Ceremony", venue: "Auditorium", category: "All" },
     { time: "1:00 PM - 5:00 PM", event: "Prompt - a - thon", venue: "Lab", category: "Technical" },
-    { time: "1:00 AM - 3:00 PM", event: "Strategic Trading and Investment Workshop", venue: "Conclave", category: "Non-Technical" },
+    { time: "1:00 PM - 3:00 PM", event: "Strategic Trading and Investment Workshop", venue: "Conclave", category: "Non-Technical" },
     { time: "1:30 PM - 5:00 PM", event: "Squid Game : Bitfest Edition", venue: "Old Canteen Area", category: "All" },
     { time: "3:00 PM - 5:00 PM", event: "Bug Buster", venue: "Lab", category: "Technical" },
     { time: "3:00 PM - 5:00 PM", event: "Cloud Computing and DevOps Workshop", venue: "Lab", category: "Technical" }
