@@ -112,7 +112,7 @@ export const events = [
     id: "bug",
     title: "Bug Buster",
     category: "Debugging",
-    fee: 100,
+    fee: 50,
     description:
       "Identify and fix bugs in increasingly complex code snippets. Race against time to clean up the messiest codebases you've ever seen!",
     rules: [
