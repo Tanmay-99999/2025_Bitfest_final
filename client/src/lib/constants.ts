@@ -149,6 +149,7 @@ export const events = [
     prizes: "1st: ₹1,000 | 2nd: ₹500",
     paymentLink: "https://pages.razorpay.com/pcacs-cs-bitfest-2025",
   },
+  
 ];
 
 // Workshops and sessions data
